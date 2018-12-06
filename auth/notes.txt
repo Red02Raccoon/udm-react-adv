@@ -1,0 +1,13 @@
+linux
+
+Start MongoDB:
+	sudo service mongod start
+
+Verify that MongoDB has started successfully:
+	/var/log/mongodb/mongod.log
+
+Stop MongoDB:
+	sudo service mongod stop
+
+Restart MongoDB
+	sudo service mongod restart

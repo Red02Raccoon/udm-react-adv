@@ -8,13 +8,12 @@ import { Inputs, InputRow, InputsList, ErrorBlock } from "./styled/Form";
 
 import * as actions from "../actions";
 
-class Signup extends Component {
+class Signin extends Component {
   onSubmit = formProps => {
-    this.props.signup(formProps, () => {
+    this.props.signin(formProps, () => {
       this.props.history.push("/feature");
     });
   };
-
   render() {
     const { handleSubmit } = this.props;
     return (
@@ -45,7 +44,7 @@ class Signup extends Component {
           <ErrorBlock>{this.props.errorMessage}</ErrorBlock>
         </Inputs>
         <Button outline color="info">
-          Sign Up
+          Sign In
         </Button>
       </form>
     );
@@ -63,5 +62,5 @@ export default compose(
     mapStateToProps,
     actions
   ),
-  reduxForm({ form: "signup" })
-)(Signup);
+  reduxForm({ form: "signin" })
+)(Signin);
